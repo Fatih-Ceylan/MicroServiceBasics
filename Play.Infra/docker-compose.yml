@@ -1,5 +1,4 @@
 
-version: "3.8"
 
 services: 
   mongo:
@@ -9,6 +8,7 @@ services:
       - 27017:27017
     volumes: 
       - mongodbdata:/data/db
+      - mongodbdataconfig:/data/configdb
 
   rabbitmq:
     image: rabbitmq:management
@@ -18,8 +18,9 @@ services:
       - 15672:15672
     volumes:
       - rabbitmqdata:/var/lib/rabbitmq
-    hostname: rabbitmq
+    hostname: rabbitmq_micro
 
 volumes: 
   mongodbdata:
+  mongodbdataconfig:
   rabbitmqdata:
