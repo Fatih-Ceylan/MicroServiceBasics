@@ -36,8 +36,8 @@ export class Inventory extends Component
 
   renderInputs()
   {
-    return <Form inline >
-      <Form.Label htmlFor="userId" srOnly>User Id:</Form.Label>
+    return <Form inline="true" >
+      <Form.Label htmlFor="userId" >User Id:</Form.Label>
       <Form.Control
         className="mb-2 mr-sm-2"
         style={{ minWidth: "350px" }}
